@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 7f38282342e2c4dbd803877b3ecb2708
+guid: 0733ab0fad9d84e8dbcb4b70b3bb067f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3124949146848436715
-    second: seed_0
+      213: -3966654026724937289
+    second: laser_0
   - first:
-      213: 5913171150182585383
-    second: seed_1
+      213: -6907599811341966104
+    second: laser_1
   - first:
-      213: -2245738326493284874
-    second: seed_2
+      213: 75752240409127395
+    second: laser_2
+  - first:
+      213: -2611778454187772553
+    second: laser_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -93,13 +96,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: seed_0
+      name: laser_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 13
-        height: 13
+        width: 50
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,20 +110,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ce70661d3d5e48d19a29616d67e15d3
-      internalID: 3124949146848436715
+      spriteID: 2cf0a10033d2645a98f7361ed0a91e61
+      internalID: -3966654026724937289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: seed_1
+      name: laser_1
       rect:
         serializedVersion: 2
-        x: 13
+        x: 50
         y: 0
-        width: 13
-        height: 13
+        width: 50
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9841b8a5fe03b4961a311ec6a1cd8ec2
-      internalID: 5913171150182585383
+      spriteID: 2d1aa0342f83f4169a14ced742b8dd92
+      internalID: -6907599811341966104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: seed_2
+      name: laser_2
       rect:
         serializedVersion: 2
-        x: 26
+        x: 100
         y: 0
-        width: 13
-        height: 13
+        width: 50
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,8 +152,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe51a6893e7f84a71949902f131e3ea0
-      internalID: -2245738326493284874
+      spriteID: 03f6d6f1506114642abb509d0ca0219b
+      internalID: 75752240409127395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 50
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae53f8ac4bbbc451cbcb235c87398679
+      internalID: -2611778454187772553
       vertices: []
       indices: 
       edges: []
@@ -158,7 +182,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ddd73ef9452944608a66b1c13858eb5a
+    spriteID: 2d516576d89d74cf7828ab02acbd7a27
     internalID: 0
     vertices: []
     indices: 

@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 7f38282342e2c4dbd803877b3ecb2708
+guid: 8f61517e159e04b84b4d258bb5e442aa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3124949146848436715
-    second: seed_0
+      213: 2862185571068646507
+    second: flower3_0
   - first:
-      213: 5913171150182585383
-    second: seed_1
+      213: 2232587922354457539
+    second: flower3_1
   - first:
-      213: -2245738326493284874
-    second: seed_2
+      213: -711703919897490712
+    second: flower3_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -93,13 +93,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: seed_0
+      name: flower3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 13
-        height: 13
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,20 +107,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ce70661d3d5e48d19a29616d67e15d3
-      internalID: 3124949146848436715
+      spriteID: 2be95a175520d4692b914b3ae1e93af7
+      internalID: 2862185571068646507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: seed_1
+      name: flower3_1
       rect:
         serializedVersion: 2
-        x: 13
+        x: 34
         y: 0
-        width: 13
-        height: 13
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,20 +128,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9841b8a5fe03b4961a311ec6a1cd8ec2
-      internalID: 5913171150182585383
+      spriteID: 7ed56f9c16be34253a02217fed067680
+      internalID: 2232587922354457539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: seed_2
+      name: flower3_2
       rect:
         serializedVersion: 2
-        x: 26
+        x: 68
         y: 0
-        width: 13
-        height: 13
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,8 +149,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe51a6893e7f84a71949902f131e3ea0
-      internalID: -2245738326493284874
+      spriteID: d320b3515f04d4529932ba19bde57c7b
+      internalID: -711703919897490712
       vertices: []
       indices: 
       edges: []
@@ -158,7 +158,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ddd73ef9452944608a66b1c13858eb5a
+    spriteID: a4accf7fc54ee40b1848c4b1dfafced5
     internalID: 0
     vertices: []
     indices: 
