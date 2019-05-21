@@ -1158,6 +1158,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 1241663342956346, guid: bb0018ce3a8caa643b44f8487c34bd25, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 20705072592914946, guid: bb0018ce3a8caa643b44f8487c34bd25,
         type: 3}
       propertyPath: m_ForceIntoRT
@@ -1172,6 +1176,11 @@ PrefabInstance:
         type: 3}
       propertyPath: field of view
       value: 93.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 20705072592914946, guid: bb0018ce3a8caa643b44f8487c34bd25,
+        type: 3}
+      propertyPath: orthographic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1275616980007928, guid: bb0018ce3a8caa643b44f8487c34bd25, type: 3}
       propertyPath: m_Layer
@@ -1948,6 +1957,31 @@ PrefabInstance:
         type: 3}
       propertyPath: OnHealthSet.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ChangeHitPointUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460243114916098, guid: 73360cdb4e1e7ed4897690f9d57fd0eb,
+        type: 3}
+      propertyPath: OnNonDamageableHit.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460243114916098, guid: 73360cdb4e1e7ed4897690f9d57fd0eb,
+        type: 3}
+      propertyPath: OnNonDamageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460243114916098, guid: 73360cdb4e1e7ed4897690f9d57fd0eb,
+        type: 3}
+      propertyPath: OnNonDamageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460243114916098, guid: 73360cdb4e1e7ed4897690f9d57fd0eb,
+        type: 3}
+      propertyPath: size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460243114916098, guid: 73360cdb4e1e7ed4897690f9d57fd0eb,
+        type: 3}
+      propertyPath: size.y
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73360cdb4e1e7ed4897690f9d57fd0eb, type: 3}
@@ -7861,6 +7895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1945583608}
   - component: {fileID: 1945583607}
+  - component: {fileID: 1945583610}
   - component: {fileID: 1945583609}
   m_Layer: 0
   m_Name: MeleeAttackAngler
@@ -7943,14 +7978,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b311b2ba652884cb45170d319c8f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _extraOffset: {x: 0, y: 0, z: 0}
   _damager: {fileID: 1141565048}
   _anglingAround: {fileID: 1141565057}
+  _angleMarker: {fileID: 1945583608}
+  _useArrowKeys: 0
+  _useMouse: 1
   _angleSpeed: 40
-  minAngle: -75
-  maxAngle: 75
-  _currentAngle: 0
+  minAngle: 0
+  maxAngle: 360
   distFromObject: 3
+  _currentAngle: 0
+--- !u!114 &1945583610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945583606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50c592f9a6146dc43bceb8475238d6e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damager: {fileID: 1141565048}
+  _distance: 2.5
 --- !u!1 &1954861407
 GameObject:
   m_ObjectHideFlags: 0
