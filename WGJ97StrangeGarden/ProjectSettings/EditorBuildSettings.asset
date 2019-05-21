@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: 
     guid: 270072cfc180a47179cff49edea38e4c
   - enabled: 1
-    path: Assets/Scenes/MainGameplayPrototype.unity
+    path: Assets/Resources/Scenes/MainGameplayPrototype.unity
     guid: 2005a8fabc041bc4493520448a016449
+  - enabled: 1
+    path: Assets/Resources/Scenes/GardenLevel1.unity
+    guid: 843a6eda4cc9c57478ef9828919a4424
   m_configObjects: {}

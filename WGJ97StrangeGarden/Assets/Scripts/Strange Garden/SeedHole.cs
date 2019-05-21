@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Seed : MonoBehaviour
+public class SeedHole : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
