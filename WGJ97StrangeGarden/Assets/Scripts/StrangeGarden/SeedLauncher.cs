@@ -10,7 +10,7 @@ public class SeedLauncher : MonoBehaviour
     [SerializeField] private float force;
     [SerializeField] private float speed;
     [SerializeField] private float inaccuracy;
-    private float time;
+    //private float time;
 
     // Start is called before the first frame update
     private void Start()
@@ -18,14 +18,15 @@ public class SeedLauncher : MonoBehaviour
         seed = Resources.Load("seed") as GameObject;
         rgbd = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        RuntimeAnimatorController ac = anim.runtimeAnimatorController;
+        /*RuntimeAnimatorController ac = anim.runtimeAnimatorController;
+        Debug.Log(ac);
         for (int i = 0; i < ac.animationClips.Length; i++)
         {
             if (ac.animationClips[i].name == "SeedLaunchShoot")        //If it has the same name as your clip
             {
                 time = ac.animationClips[i].length;
             }
-        }
+        }*/
 
     }
 
@@ -36,7 +37,8 @@ public class SeedLauncher : MonoBehaviour
         {
             ShootSeed();
             anim.SetBool("shoot", true);
-            StartCoroutine(ShootingAnim());
+            
+            StartCoroutine(ShootingAnim(anim.GetCurrentAnimatorStateInfo(0).length));
         }
     }
 
@@ -51,7 +53,7 @@ public class SeedLauncher : MonoBehaviour
         projectile.GetComponent<Rigidbody2D>().AddForce(new Vector3(0.45f, 0.45f, 0f) * force);
     }
     
-    IEnumerator ShootingAnim()
+    IEnumerator ShootingAnim(float time)
     {
         yield return new WaitForSeconds(time);
         anim.SetBool("shoot", false);
