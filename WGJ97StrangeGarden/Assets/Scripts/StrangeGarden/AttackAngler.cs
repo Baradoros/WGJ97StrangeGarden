@@ -58,6 +58,10 @@ public class AttackAngler : MonoBehaviour2D
     protected override void Update()
     {
         base.Update();
+
+        if (Time.timeScale == 0)
+            return;
+            
         HandleArrowKeyControls();
         HandleMouseControls();
         //KeepAngleWithinLimits();

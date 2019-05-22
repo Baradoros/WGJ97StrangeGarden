@@ -51,6 +51,7 @@ public class SeedHitter : MonoBehaviour2D
 
         Debug.Log("Hit " + seedToHit.name);
         seedToHit.rigidbody.AddForce(impact);
+        seedToHit.Hit.Invoke();
 
     }
 }
