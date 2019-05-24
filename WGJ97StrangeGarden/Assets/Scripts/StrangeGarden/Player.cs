@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 /*
 Author: Sebastian Lague
@@ -8,6 +9,8 @@ Author: Sebastian Lague
 
 [RequireComponent (typeof (Controller2D))]
 public class Player : MonoBehaviour {
+	public UnityEvent Jumped;
+	public UnityEvent Walked;
 
 	public float jumpHeight = 4;
 	public float timeToJumpApex = .4f;
@@ -39,6 +42,7 @@ public class Player : MonoBehaviour {
 		Vector2 input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
 
 		if (Input.GetKeyDown (KeyCode.Space) && controller.collisions.below) {
+			Jumped.Invoke();
 			velocity.y = jumpVelocity;
 		}
 
@@ -46,5 +50,6 @@ public class Player : MonoBehaviour {
 		velocity.x = Mathf.SmoothDamp (velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below)?accelerationTimeGrounded:accelerationTimeAirborne);
 		velocity.y += gravity * Time.deltaTime;
 		controller.Move (velocity * Time.deltaTime);
+
 	}
 }
