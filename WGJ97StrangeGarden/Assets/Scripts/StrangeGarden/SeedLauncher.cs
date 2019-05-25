@@ -33,7 +33,7 @@ public class SeedLauncher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Return))
+        if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.L))
         {
             ShootSeed();
             anim.SetBool("shoot", true);
@@ -47,7 +47,7 @@ public class SeedLauncher : MonoBehaviour
         Debug.Log(transform.forward);
         Vector3 direction = transform.forward + Random.insideUnitSphere * inaccuracy;
 
-        GameObject projectile = Instantiate(seed, GetComponent<Rigidbody2D>().transform.position, Quaternion.LookRotation(direction)) as GameObject;
+        GameObject projectile = Instantiate<GameObject>(seed, transform.position, Quaternion.LookRotation(direction));
         projectile.GetComponent<Rigidbody2D>().velocity = (projectile.transform.forward * speed);
         Debug.Log(Vector3.up);
         projectile.GetComponent<Rigidbody2D>().AddForce(new Vector3(0.45f, 0.45f, 0f) * force);
