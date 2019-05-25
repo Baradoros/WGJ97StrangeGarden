@@ -5,17 +5,18 @@ using UnityEngine;
 public class SeedLauncher : MonoBehaviour
 {
     private Rigidbody2D rgbd;
-    private GameObject seed;
+    [SerializeField] private GameObject seed;
     private Animator anim;
     [SerializeField] private float force;
     [SerializeField] private float speed;
     [SerializeField] private float inaccuracy;
+    [SerializeField] protected float shotDelay = 1;
     //private float time;
 
     // Start is called before the first frame update
     private void Start()
     {
-        seed = Resources.Load("seed") as GameObject;
+        //seed = Resources.Load("seed") as GameObject;
         rgbd = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         /*RuntimeAnimatorController ac = anim.runtimeAnimatorController;
@@ -28,18 +29,8 @@ public class SeedLauncher : MonoBehaviour
             }
         }*/
 
-    }
+        StartCoroutine(InitialSeedShot(shotDelay));
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.L))
-        {
-            ShootSeed();
-            anim.SetBool("shoot", true);
-            
-            StartCoroutine(ShootingAnim(anim.GetCurrentAnimatorStateInfo(0).length));
-        }
     }
 
     public void ShootSeed()
@@ -48,11 +39,22 @@ public class SeedLauncher : MonoBehaviour
         Vector3 direction = transform.forward + Random.insideUnitSphere * inaccuracy;
 
         GameObject projectile = Instantiate<GameObject>(seed, transform.position, Quaternion.LookRotation(direction));
-        projectile.GetComponent<Rigidbody2D>().velocity = (projectile.transform.forward * speed);
-        Debug.Log(Vector3.up);
-        projectile.GetComponent<Rigidbody2D>().AddForce(new Vector3(0.45f, 0.45f, 0f) * force);
+        
+        Rigidbody2D projRb = projectile.GetComponent<Rigidbody2D>();
+        projRb.velocity = (projectile.transform.forward * speed);
+        
+        projRb.AddForce(new Vector3(0.45f, 0.45f, 0f) * force);
     }
     
+    IEnumerator InitialSeedShot(float time)
+    {
+        yield return new WaitForSeconds(time);
+        ShootSeed();
+        anim.SetBool("shoot", true);
+            
+        StartCoroutine(ShootingAnim(anim.GetCurrentAnimatorStateInfo(0).length));
+    }
+
     IEnumerator ShootingAnim(float time)
     {
         yield return new WaitForSeconds(time);

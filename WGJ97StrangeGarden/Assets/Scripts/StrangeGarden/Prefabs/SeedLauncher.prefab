@@ -97,9 +97,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e2e17a0433f8574b912363435368dac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 2000
-  speed: 600
+  seed: {fileID: 7250334240710048804, guid: facb2f39c93e8f444a6e994fe0ce81f5, type: 3}
+  force: 1000
+  speed: 300
   inaccuracy: 0.01
+  shotDelay: 1
 --- !u!50 &669493996868692850
 Rigidbody2D:
   serializedVersion: 4
@@ -145,7 +147,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.4, y: 0.5}
   m_EdgeRadius: 0
 --- !u!95 &7112662544156614969
 Animator:
