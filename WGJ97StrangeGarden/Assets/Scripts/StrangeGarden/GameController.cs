@@ -27,5 +27,9 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 
 }

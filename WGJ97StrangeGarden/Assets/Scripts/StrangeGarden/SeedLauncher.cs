@@ -19,6 +19,7 @@ public class SeedLauncher : MonoBehaviour
         //seed = Resources.Load("seed") as GameObject;
         rgbd = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        SeedController.AnyCreate += OnAnySeedCreate;
         /*RuntimeAnimatorController ac = anim.runtimeAnimatorController;
         Debug.Log(ac);
         for (int i = 0; i < ac.animationClips.Length; i++)
@@ -29,7 +30,7 @@ public class SeedLauncher : MonoBehaviour
             }
         }*/
 
-        StartCoroutine(InitialSeedShot(shotDelay));
+        StartCoroutine(SeedShotCoroutine(shotDelay));
 
     }
 
@@ -46,7 +47,7 @@ public class SeedLauncher : MonoBehaviour
         projRb.AddForce(new Vector3(0.45f, 0.45f, 0f) * force);
     }
     
-    IEnumerator InitialSeedShot(float time)
+    IEnumerator SeedShotCoroutine(float time)
     {
         yield return new WaitForSeconds(time);
         ShootSeed();
@@ -59,5 +60,17 @@ public class SeedLauncher : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         anim.SetBool("shoot", false);
+    }
+
+    void OnAnySeedCreate(SeedController seed)
+    {
+        // Maks sure to spawn another seed when this one is gone
+        seed.Gone.AddListener(OnSeedGone);
+    }
+
+
+    void OnSeedGone()
+    {
+        StartCoroutine(SeedShotCoroutine(shotDelay));
     }
 }

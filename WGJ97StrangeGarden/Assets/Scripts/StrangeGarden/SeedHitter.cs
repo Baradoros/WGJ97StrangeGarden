@@ -50,6 +50,7 @@ public class SeedHitter : MonoBehaviour2D
         impact *=                                   force;
 
         Debug.Log("Hit " + seedToHit.name);
+        seedToHit.rigidbody.velocity = Vector2.zero;
         seedToHit.rigidbody.AddForce(impact);
         seedToHit.Hit.Invoke();
 

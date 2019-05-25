@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using TeaspoonTools.UI;
 
 public class ScoreDisplay : UIElementController
 {
     #region Serializable Fields
+    [SerializeField] UnityEvent _ScoreChange;
     [SerializeField]
     int _score;
 
@@ -15,6 +17,7 @@ public class ScoreDisplay : UIElementController
     #endregion
 
     #region Properties
+    public UnityEvent ScoreChange { get { return _ScoreChange; } }
     public int score 
     { 
         get { return _score; } 
@@ -22,6 +25,7 @@ public class ScoreDisplay : UIElementController
         {
             _score =                        value;
             Refresh();
+            ScoreChange.Invoke();
         }
         
     }
