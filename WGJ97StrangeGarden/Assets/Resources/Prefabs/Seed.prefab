@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 3124949146848436715, guid: 7f38282342e2c4dbd803877b3ecb2708,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -133,6 +133,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Hit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _Gone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,

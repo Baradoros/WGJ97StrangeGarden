@@ -132,10 +132,11 @@ namespace TeaspoonTools
 		protected override void Update () 
 		{
 			base.Awake();
+			/* 
 			if (EditorApplication.isPlaying)
 				HaveMoveSpeedUpdateVelocity(); 
 				// ^ For when you want to edit the move speed in the editor, and have it actually work on the object.
-			
+			*/
 		}
 
 		
